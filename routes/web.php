@@ -18,7 +18,20 @@
    ('/register') ->formregist
    ('/welcome') ->selamat datang ambil method post
 */
-Route::get('/', 'HomeController@show');
+//tugas MVC sukses
+//Route::get('/', 'HomeController@show');
 Route::get('/register', 'AuthController@create');
 Route::post('/welcome1', 'AuthController@read');
 
+route::get('/master', function(){
+   return view('adminlte.master');
+});
+
+//tugas template adminlte
+route::get('/', function(){
+   return view('items.index');
+});
+
+route::get('/data-tables', function(){
+   return view('items.datatables');
+});
