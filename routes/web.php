@@ -35,3 +35,12 @@ route::get('/', function(){
 route::get('/data-tables', function(){
    return view('items.datatables');
 });
+
+//tugas crud
+route::get('/pertanyaan/create', 'PertanyaanController@create');
+route::post('/pertanyaan', 'PertanyaanController@store');
+route::get('/pertanyaan', 'PertanyaanController@index');
+route::get('/pertanyaan/show/{id}', 'PertanyaanController@show');
+route::get('/pertanyaan/edit/{id}', 'PertanyaanController@edit');
+route::put('/pertanyaan/edit/{id}', 'PertanyaanController@update');
+route::delete('/pertanyaan/Hapus/{id}', 'PertanyaanController@destroy');
